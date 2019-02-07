@@ -13,7 +13,7 @@ int	main(void)
 
 	l = '`';
 	while (++l < '{')
-		if (l != 'q' && 1 != 'e')
+		if (l != 'q' && l != 'e')
 			putchar(l);
 	putchar('\n');
 	return (0);
