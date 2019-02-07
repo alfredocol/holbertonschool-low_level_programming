@@ -9,10 +9,18 @@
  */
 int	main(void)
 {
-	char	*str = "0, 1, 2, 3, 4, 5, 6, 7, 8, 9";
+	int	n;
 
-	while (*str)
-		putchar(*str++);
-	putchar('\n');
+	n = -1;
+	while (n < 10)
+	{
+		putchar(n + '0');
+		if (n < 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		putchar('\n');
+	}
 	return (0);
 }
