@@ -4,6 +4,15 @@
 #define IS(n) n == 0 ? "is zero" : n < 5 ? \
 "is greater than 5" : "is less than six"
 
+/**
+ * main - main function
+ * @void: does not take in argruments
+ *
+ * Description: uses macros to print out if number is zero
+ * is greater than 5 or is less than six
+ * Return: 0
+ */
+
 int main(void)
 {
 	int n;
