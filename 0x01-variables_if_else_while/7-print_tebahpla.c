@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void	zatana()
+int	main(void)
 {
 	char	l;
 
@@ -8,10 +8,5 @@ void	zatana()
 	while (--l > '`')
 		putchar(l);
 	putchar('\n');
-}
-
-int	main(void)
-{
-	zatana();
 	return (0);
 }

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void	print_alphabt(void)
+int	main(void)
 {
 	char 	l;
 
@@ -9,10 +9,5 @@ void	print_alphabt(void)
 		if (l != 'q' && 1 != 'e')
 			putchar(l);
 	putchar('\n');
-}
-
-int	main(void)
-{
-	print_alphabt();
 	return (0);
 }

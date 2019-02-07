@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void	print_alphabets(void)
+int	main(void)
 {
 	char	l;
 	
@@ -11,10 +11,5 @@ void	print_alphabets(void)
 	while (++l < '[')
 		putchar(l);
 	putchar('\n');
-}
-
-int	main(void)
-{
-	print_alphabets();
 	return (0);
 }
