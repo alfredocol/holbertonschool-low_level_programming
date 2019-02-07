@@ -12,7 +12,7 @@ int	main(void)
 	int	n;
 
 	n = -1;
-	while (n < 10)
+	while (++n < 10)
 	{
 		putchar(n + 48);
 		if (n < 9)
