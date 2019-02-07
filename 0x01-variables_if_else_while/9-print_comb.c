@@ -14,7 +14,7 @@ int	main(void)
 	n = -1;
 	while (n < 10)
 	{
-		putchar(n + '0');
+		putchar(n + 48);
 		if (n < 9)
 		{
 			putchar(',');
