@@ -16,7 +16,7 @@ int	main(void)
 	l = '`';
 	while (++l < '{')
 		putchar(l);
-	l -= 58;
+	l -= 59;
 	while (++l < '[')
 		putchar(l);
 	putchar('\n');
