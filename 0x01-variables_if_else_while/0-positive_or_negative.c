@@ -4,6 +4,14 @@
 #define PRINT_SIGN(n) (n < 0 ? printf("%d is negative\n", n) : n == 0 ? \
 printf("%d is zero\n", n) : printf("%d is positive\n", n))
 
+/**
+ * main - main function
+ * @void: does not take in arguments
+ *
+ * Description:  uses macros to check if and print out if
+ * number is positive or negative
+ * Return:  0
+ */
 int main(void)
 {
 	int n;
