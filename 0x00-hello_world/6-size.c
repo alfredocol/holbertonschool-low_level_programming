@@ -2,9 +2,9 @@
 
 /**
  * main - returns 0
- * @void: void
- *
- * Description: print out size of data types char, int, long int, long long, float.
+ * @void: void*
+ * Description: print out size of data
+ * types char, int, long int, long long, float.
  * Return: 0
  */
 int	main(void)
