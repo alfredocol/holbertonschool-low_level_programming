@@ -9,8 +9,8 @@
  */
 int	main(void)
 {
-	int	i,j;
-	
+	int	i, j;
+
 	i = -1;
 	while (++i < 10)
 	{
@@ -24,7 +24,7 @@ int	main(void)
 			putchar(',');
 			putchar(' ');
 		}
-		
+
 	}
 	putchar('\n');
 	return (0);
