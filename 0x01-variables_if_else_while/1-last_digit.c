@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-#define IS(n) n == 0 ? "and is 0" : n < 5 ? \
+#define IS(n) n == 0 ? "and is 0" : n > 5 ? \
 "and is greater than 5" : "and is less than 6 and not 0"
 
 /**
