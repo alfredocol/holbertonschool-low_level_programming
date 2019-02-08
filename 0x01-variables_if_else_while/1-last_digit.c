@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 #define IS(n) n == 0 ? "is zero" : n < 5 ? \
-"is greater than 5" : "is less than six"
+"is greater than 5" : "is less than six and not zero"
 
 /**
  * main - main function
