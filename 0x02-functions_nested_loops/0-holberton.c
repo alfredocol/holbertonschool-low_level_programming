@@ -1,7 +1,4 @@
-#include <unistd.h>
-#include <holberton.h>
-
-void	_putchar(int c);
+#include "holberton.h"
 
 /**
  * holberton - prints "Holberton"
