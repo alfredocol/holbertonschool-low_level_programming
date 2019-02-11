@@ -10,7 +10,6 @@
 void	holberton()
 {
 	char 	*holberton = "Holberton\n";
-	int	i;
 	
 	while (*holberton)
 		_putchar(*holberton++);

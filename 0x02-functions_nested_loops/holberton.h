@@ -4,4 +4,4 @@
 
 int	_putchar(char c);
 
-#endif //HOLBERTON_H
+#endif 
