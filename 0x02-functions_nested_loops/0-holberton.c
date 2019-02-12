@@ -7,13 +7,13 @@
  * Description: prints Holberton folowed by a new line
  * Return: ;
  */
-void	holberton()
+void	holberton(void)
 {
-	char 	*holberton = "Holberton\n";
-	
+	char	*holberton = "Holberton\n";
+
 	while (*holberton)
 		_putchar(*holberton++);
-} 
+}
 
 /**
  * main - calls holberton() helper function, returns 0
@@ -21,7 +21,7 @@ void	holberton()
  *
  * Description: print Holberton followed by a newline
  * Return: 0
- */	
+ */
 int	main(void)
 {
 	holberton();
