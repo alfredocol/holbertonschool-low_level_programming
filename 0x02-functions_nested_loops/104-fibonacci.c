@@ -15,7 +15,7 @@ void	print(unsigned long left, unsigned long right)
 	/*if left == 0*/
 	if (!left)
 		printf("%lu, ", right);
-	else if (i == 96)
+	else if (i == 98)
 		printf("%lu%lu\n", left, right);
 	else
 		printf("%lu%lu, ", left, right);
