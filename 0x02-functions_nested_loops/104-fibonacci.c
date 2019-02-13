@@ -44,7 +44,7 @@ void	fibonacci(int n)
 	current_half_r = 2;
 	print(prev_half_l, prev_half_r);
 	print(current_half_l, current_half_r);
-	for (i = 0; i < n - 4; i++)
+	for (i = 0; i < n - 2; i++)
 	{
 		/*get temporary values for next sequence*/
 		temp = prev_half_r + current_half_r;
