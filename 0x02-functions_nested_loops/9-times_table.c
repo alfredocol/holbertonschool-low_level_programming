@@ -12,8 +12,8 @@ void	putnum(int num)
 		_putchar(num + '0');
 	else
 	{
-		_putchar((num / 10) + '0');
-		_putchar((num % 10) + '0');
+		putnum(num / 10);
+		putnum(num % 10);
 	}
 }
 /**
