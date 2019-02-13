@@ -18,7 +18,7 @@ void	print_spaces(int num)
 	else
 		digits = 1;
 	for (spaces = 0; spaces < digits; spaces++)
-		_putchar('.');
+		_putchar(' ');
 }
 
 /**
