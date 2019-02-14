@@ -15,10 +15,23 @@ void	print(unsigned long left, unsigned long right)
 	/*if left == 0*/
 	if (!left)
 		printf("%lu, ", right);
-	else if (i == 98)
-		printf("%lu%lu\n", left, right);
 	else
-		printf("%lu%lu, ", left, right);
+	{
+		if (i == 98)
+		{
+			if (right < 10)
+				printf("%lu0%lu\n", left, right);
+			else
+				printf("%lu%lu\n", left, right);
+		}
+		else
+		{
+			if (right < 10)
+				printf("%lu0%lu, ", left, right);
+			else
+				printf("%lu%lu, ", left, right);
+		}
+	}
 	i++;
 }
 /**
