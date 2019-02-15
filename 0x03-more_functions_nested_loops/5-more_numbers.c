@@ -17,11 +17,15 @@ void	more_numbers(void)
 
 	while (++i < 10)
 	{
-		j = 0;
-		while (more_numbers[j])
-			_putchar(more_numbers[j++]);
-		k = 0;
-		while (more_numbers_the_sequel[k])
-			_putchar(more_numbers_the_sequel[k++]);
+		j = -1;
+		while (++j < 10)
+			_putchar(j + '0');
+		k = -1;
+		while (++k < 5)
+		{
+			_putchar('1');
+			_putchar(k + '0');
+		}
+		_putchar('\n');
 	}
 }
