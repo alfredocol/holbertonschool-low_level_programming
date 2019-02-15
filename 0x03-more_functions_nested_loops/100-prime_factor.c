@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 
 /**
@@ -17,6 +16,7 @@ void	prime_factor(void)
 	unsigned int	n2 = n / 2;
 	unsigned int	factor;
 	unsigned int	prime;
+	int		found = 0;
 
 	while (n2 > 2)
 {
@@ -29,18 +29,27 @@ void	prime_factor(void)
 			{
 				if (factor == 2 && prime % 2 != 0)
 				{
-					printf("answer = %d\n", prime);
-					return (void);
+					printf("%d\n", prime);
+					found = 1;
 				}
 				if (prime % factor == 0)
 					break;
 				factor--;
 			}
 		}
+		if (found)
+			break;
 		n2--;
 	}
 }
 
+/**
+ * main - main
+ * @void: void
+ *
+ * Description: calls prime_factor
+ * Return: 0
+ */
 int	main(void)
 {
 	prime_factor();
