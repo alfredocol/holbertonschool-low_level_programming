@@ -9,9 +9,9 @@
  */
 void	print_numbers(void)
 {
-	char	n = '0';
+	char	*numbers = "0123456789\n";
 
-	while (n < ':')
-		_putchar(n++);
+	while (*numbers)
+		_putchar(*numbers++);
 	_putchar('\n');
 }
