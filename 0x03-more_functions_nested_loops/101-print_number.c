@@ -9,6 +9,8 @@
  */
 void	print_number(int n)
 {
+	static int newline = 0;
+	
 	if (n < 0)
 	{
 		_putchar('-');
@@ -27,4 +29,7 @@ void	print_number(int n)
 	}
 	else if (n < 10)
 		_putchar(n + '0');
+	if (newline == 0)
+		_putchar('\n');
+	newline++;
 }
