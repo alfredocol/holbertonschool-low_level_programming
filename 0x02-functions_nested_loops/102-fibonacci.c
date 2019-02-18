@@ -14,7 +14,7 @@ void	fibonacci(int n)
 	n1 = 1;
 	n2 = 2;
 	temp = 0;
-	
+
 	printf("1, 2, ");
 	n -= 2;
 	while (n--)
