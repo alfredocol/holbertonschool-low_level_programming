@@ -50,17 +50,20 @@ void	print_times_table(int n)
 {
 	int	i, j, product;
 
-	for (i = 0; i < n + 1; i++)
+	if (n > -1 && n < 16)
 	{
-		for (j = 0; j < n + 1; j++)
+		for (i = 0; i < n + 1; i++)
 		{
-			product = i * j;
-			print_num(product);
-			if (j == n)
-				break;
-			_putchar(',');
-			print_spaces(product + i);
+			for (j = 0; j < n + 1; j++)
+			{
+				product = i * j;
+				print_num(product);
+				if (j == n)
+					break;
+				_putchar(',');
+				print_spaces(product + i);
+			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
