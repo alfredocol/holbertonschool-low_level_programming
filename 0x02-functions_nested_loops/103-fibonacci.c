@@ -10,7 +10,7 @@
  */
 void	fibonacci_sum(int n)
 {
-	int	i, n1, n2, temp, sum;
+	int	n1, n2, temp, sum;
 
 	n1 = 1;
 	n2 = 2;
