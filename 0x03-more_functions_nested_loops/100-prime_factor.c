@@ -31,7 +31,7 @@ int	isprime(int n)
  */
 void	_prime(unsigned long n)
 {
-	unsigned long	i, prime, largest_prime;
+	unsigned long	prime, largest_prime;
 	
 	largest_prime = n;
 	for (prime = 2; prime < largest_prime; prime++)
