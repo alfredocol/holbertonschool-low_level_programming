@@ -22,9 +22,9 @@ int	isprime(int n)
 	return (1);
 }
 /**
- * prime_factor - prints largest prime factor of the number
+ * _prime - prints largest prime factor of the number
  * 612852475143
- * @void: void
+ * @n: int
  *
  * Description: see prime_factor
  * Return: ;
@@ -32,7 +32,7 @@ int	isprime(int n)
 void	_prime(unsigned long n)
 {
 	unsigned long	prime, largest_prime;
-	
+
 	largest_prime = n;
 	for (prime = 2; prime < largest_prime; prime++)
 		if (isprime(prime))
