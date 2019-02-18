@@ -49,6 +49,6 @@ void	_prime(unsigned long n)
  */
 int	main(void)
 {
-	_prime();
+	_prime(612852475143);
 	return (0);
 }
