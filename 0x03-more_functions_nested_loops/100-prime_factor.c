@@ -49,6 +49,6 @@ void	_prime(unsigned long n)
  */
 int	main(void)
 {
-	prime_factor();
+	_prime();
 	return (0);
 }
