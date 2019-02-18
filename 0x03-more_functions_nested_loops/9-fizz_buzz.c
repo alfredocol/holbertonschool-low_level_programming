@@ -33,3 +33,15 @@ void	fizz_buzz(void)
 			printf(" ");
 	}
 }
+/**
+ * main - calls fizz_buzz
+ * @void: void
+ *
+ * Description: calls fizz_buzz
+ * Return: 0
+ */
+int	main(void)
+{
+	fizz_buzz();
+	return (0);
+}
