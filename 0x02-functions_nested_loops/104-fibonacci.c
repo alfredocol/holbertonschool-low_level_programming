@@ -71,7 +71,6 @@ void	fibonacci(int n)
 		current_half_r = temp_r;
 		print(current_half_l, current_half_r);
 	}
-	printf("\n");
 }
 
 /**
