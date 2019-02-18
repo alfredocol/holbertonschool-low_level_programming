@@ -10,10 +10,10 @@
  */
 void	more_numbers(void)
 {
-	char	i, j;
+	char	i, j, k;
 	char	n[] = "01234567891011121314\n";
 
 	for (i = 0; i < 10; i++)
 		for (j = 0; j < 21; j++)
-			_putchar((int)n[j]);
+			_putchar(k = n[j]);
 }
