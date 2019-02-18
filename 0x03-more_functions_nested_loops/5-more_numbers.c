@@ -10,8 +10,6 @@
  */
 void	more_numbers(void)
 {
-	char	*more_numbers = "0123456789";
-	char	*more_numbers_the_sequel = "1011121314\n";
 	char	i = -1;
 	char	j, k;
 
