@@ -25,8 +25,8 @@ void	fibonacci_sum(int n)
 			break;
 		if (!(n2 % 2))
 			sum += n2;
-		printf("fibonacci:%d %d\n", n2, sum);
 	}
+	printf("%d\n"sum);
 }
 
 /**
