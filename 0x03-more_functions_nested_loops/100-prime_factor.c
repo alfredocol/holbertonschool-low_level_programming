@@ -1,7 +1,26 @@
 #include "holberton.h"
 #include <stdio.h>
 
+/**
+ * isprime - returns 1 if prime
+ * @n: int
+ *
+ * Description: tests if prime
+ * Return: 1 if prime, else 0
+ */
+int	isprime(int n)
+{
+	int		i;
 
+	if (n < 2)
+		return (0);
+	if (n == 2 || n == 3)
+		return (1);
+	for (i = 2; i < n / 2; i++)
+		if (!(n / i))
+			return (0);
+	return (1);
+}
 /**
  * prime_factor - prints largest prime factor of the number
  * 612852475143
@@ -10,39 +29,17 @@
  * Description: see prime_factor
  * Return: ;
  */
-void	prime_factor(void)
+void	_prime(unsigned long n)
 {
-	unsigned long	n = 612852475143;
-	unsigned int	n2 = n / 2;
-	unsigned int	factor;
-	unsigned int	prime;
-	int		found = 0;
-
-	while (n2 > 2)
-{
-		/*if n2 is a factor of n check if n is prime */
-		if (n % n2 == 0)
-		{
-			prime = n2;
-			factor = prime / 2;
-			while (factor > 1)
-			{
-				if (factor == 2 && prime % 2 != 0)
-				{
-					printf("%d\n", prime);
-					found = 1;
-				}
-				if (prime % factor == 0)
-					break;
-				factor--;
-			}
-		}
-		if (found)
-			break;
-		n2--;
-	}
+	unsigned long	i, prime, largest_prime;
+	
+	largest_prime = n;
+	for (prime = 2; prime < largest_prime; prime++)
+		if (isprime(prime))
+			while (!(largest_prime % prime))
+				largest_prime = largest_prime / prime;
+	printf("%lu\n", largest_prime);
 }
-
 /**
  * main - main
  * @void: void
