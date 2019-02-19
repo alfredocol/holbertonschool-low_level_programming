@@ -24,7 +24,7 @@ int	_strlen(char *s)
  */
 void	puts_half(char *str)
 {
-	int	start, len = _strlen(str);
+	int	start = 0, len = _strlen(str);
 
 	!(len % 2) ? (start = len / 2) : (start = (len - 1) / 2);
 	while (start < len)
