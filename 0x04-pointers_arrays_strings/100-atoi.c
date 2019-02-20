@@ -28,7 +28,7 @@ int	_atoi(char *s)
 		avoid_error = *s++;
 	}
 	(avoid_error) ? (avoid_error = 0) : (avoid_error = 0);
-	if (neg == 1)
+	if (neg == -1)
 		return (-result);
 	return (result);
 }
