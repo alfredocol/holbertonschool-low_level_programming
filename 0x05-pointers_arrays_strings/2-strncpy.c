@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _strcmp - compares two strings
+ * _strncpy - copies n chars from src to dest
  * @dest: string
  * @src: string
  * @n: number of elements fo copy
