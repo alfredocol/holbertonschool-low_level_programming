@@ -5,10 +5,15 @@
  * @dest: string
  * @src: string
  *
- * return: concatenated str
+ * Return: dest
  */
 char *_strcat(char *dest, char *src)
 {
-	return (dest);
+	char	*p = dest;
 
+	while (*p++)
+		;
+	while (*src)
+		*p++ = *src++;
+	return (dest);
 }

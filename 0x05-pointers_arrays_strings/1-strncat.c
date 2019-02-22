@@ -1,15 +1,20 @@
 #include "holberton.h"
 
 /**
- * _strcmp - concat n char of src to dest
+ * _strncat - concat n char of src to dest
  * @dest: string
  * @src: string
  * @n: number of elements fo copy
  *
- * return: concatenated str
+ * Return: concatenated str
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	return (dest);
+	char	*p;
 
+	while (*p++)
+		;
+	while (*src && n--)
+		*p++ = *src++;
+	return (dest);
 }
