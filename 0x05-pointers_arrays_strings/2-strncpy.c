@@ -6,7 +6,7 @@
  * @src: string
  * @n: number of elements fo copy
  *
- * return: diff
+ * return: copied str
  */
 char *_strncpy(char *dest, char *src, int n)
 {
