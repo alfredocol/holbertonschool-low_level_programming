@@ -11,10 +11,11 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	char	*p;
+	int	len;
 
-	while (*p++)
-		;
+	while (p[len])
+		len++;
 	while (*src && n--)
-		*p++ = *src++;
+		p[len++] = *src++;
 	return (dest);
 }
