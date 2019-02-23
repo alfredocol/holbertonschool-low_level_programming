@@ -28,11 +28,11 @@ char *cap_string(char *s)
 
 	while (*p)
 	{
-		while (issep(*p))
+		while (*p && issep(*p))
 			p++;
 		if (*p >= 'a' && *p <= 'z')
 			*p -= 32;
-		while (!(issep(*p)))
+		while (*p && !(issep(*p)))
 			p++;
 	}
 	return (s);
