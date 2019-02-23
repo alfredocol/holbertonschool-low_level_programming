@@ -11,8 +11,6 @@ char *_strcat(char *dest, char *src)
 {
 	char	*p = dest;
 	
-	if (*src)
-		*src;
 	while (*p++)
 		;
 	while (*src)
