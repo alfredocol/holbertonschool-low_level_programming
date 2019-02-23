@@ -8,7 +8,7 @@
  */
 int	issep(char c)
 {
-	char	*sep " \n\t,;.!?\"(){}";
+	char	*sep = " \n\t,;.!?\"(){}";
 
 	while (*sep)
 		if (*sep++ == c)
