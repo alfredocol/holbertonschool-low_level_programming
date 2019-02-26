@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * _strcmp - compares two strings
  * @s1: string 1
@@ -28,6 +28,8 @@ char *_strstr(char *haystack, char *needle)
 {
 	int	i = 0;
 
+	if (!needle)
+		return (haystack);
 	while (*(haystack + i))
 	{
 		if (!(_strcmp(haystack + i, needle)))
