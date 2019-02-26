@@ -9,12 +9,16 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	while ((*s1) && (*s2) && *s1 == *s2)
+	while ((*s2) && (*s1))
 	{
+		if (*s1 != *s2)
+			return (0);
 		s1++;
 		s2++;
+		if (!(*s2))
+			break;
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return (0);
 }
 
 /**
@@ -32,7 +36,7 @@ char *_strstr(char *haystack, char *needle)
 		return (haystack);
 	while (*(haystack + i))
 	{
-		if (!(_strcmp(haystack + i, needle)))
+		if (_strcmp(haystack + i, needle))
 			return (haystack + i);
 		i++;
 	}
