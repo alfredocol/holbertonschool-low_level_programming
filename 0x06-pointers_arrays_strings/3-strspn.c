@@ -10,10 +10,9 @@
  */
 unsigned	int _strspn(char *s, char *accept)
 {
-	int	i, j, match, max, sum;
+	int	i, j, match, sum;
 
 	sum = 0;
-	max = 0;
 	i = 0;
 	while (s[i])
 	{
@@ -30,11 +29,9 @@ unsigned	int _strspn(char *s, char *accept)
 		}
 		if (match)
 			sum += 1;
-		else
-			sum = 0;
-		if (sum > max)
-			max = sum;
+		else if (sum)
+			return ((unsigned int)sum);
 		i++;
 	}
-	return ((unsigned int) max);
+	return ((unsigned int) sum);
 }
