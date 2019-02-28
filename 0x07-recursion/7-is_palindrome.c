@@ -19,10 +19,10 @@ int     _strlen_recursion(char *s)
  */
 int	palindrome(char *s, int i, int j)
 {
-	if (i < len)
+	if (i < j)
 	{
-		if (s[i] == s[len])
-			return (palindrome(s, ++i, --len));
+		if (s[i] == s[j])
+			return (palindrome(s, ++i, --j));
 		else
 			return (0);
 	}
