@@ -11,8 +11,7 @@ int	_atoi(char *s)
 	int	neg = 1;
 	int	result = 0;
 	char	avoid_error;
-	
-	
+
 	/*white space charcters*/
 	while (*s)
 	{
