@@ -9,25 +9,22 @@
 int	_atoi(char *s)
 {
 	int	neg = 1;
-	int	result = 0;
-	char	avoid_error;
+	unsigned int	result = 0;
 
-	/*white space charcters*/
 	while (*s)
 	{
 		if (*s == '-')
 			neg *= -1;
 		if (*s >= '0' && *s <= '9')
 			break;
-		avoid_error = *s++;
+		s++;
 	}
 	while (*s >= '0' && *s <= '9')
 	{
 		result = result * 10 + (*s - '0');
-		avoid_error = *s++;
+		s++;
 	}
-	(avoid_error) ? (avoid_error = 0) : (avoid_error = 0);
 	if (neg == -1)
-		return (-result);
+		return ((int) -result);
 	return (result);
 }
