@@ -51,7 +51,7 @@ int	_add(int argc, char *argv[])
 int	main(int argc, char *argv[])
 {
 	(void)argv;
-	if (argc == 1 || (!_add(argc, argv)))
+	if (argc == 1)
 		printf("0\n");
 	if (!_add(argc, argv))
 	{
