@@ -54,7 +54,7 @@ int	main(int argc, char *argv[])
 	if (argc == 1 || (!_add(argc, argv)))
 	{
 		if (argc == 1)
-			printf("0\n")
+			printf("0\n");
 		else
 			printf("Error\n");
 		return (1);
