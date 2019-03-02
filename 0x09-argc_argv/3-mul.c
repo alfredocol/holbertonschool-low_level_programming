@@ -38,3 +38,20 @@ int     _mul(char *num1, char *num2)
 	printf("%d\n", n1 * n2);
 	return (1);
 }
+/**
+ * main - calls mul, prints error if applicable
+ * @argc: number of arguments
+ * @argv: passed in arguments
+ *
+ * Return: 0
+ */
+int     main(int argc, char *argv[])
+{
+	(void)argv;
+	if (argc != 3 || (!_mul(argv[1], argv[2])))
+	{
+		printf("Error\n");
+		return (1);
+	}
+	return (0);
+}
