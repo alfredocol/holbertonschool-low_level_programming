@@ -52,6 +52,12 @@ int	main(int argc, char *argv[])
 {
 	(void)argv;
 	if (argc == 1 || (!_add(argc, argv)))
-		printf("Error\n");
+	{
+		if (argc == 1)
+			printf("0\n")
+		else
+			printf("Error\n");
+		return (1);
+	}
 	return (0);
 }
