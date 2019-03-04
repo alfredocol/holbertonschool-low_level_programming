@@ -34,7 +34,7 @@ int	_add(int argc, char *argv[])
 	while (--argc > 0)
 	{
 		n = atoi(argv[argc]);
-		if (n < 0 || (!n && !_aredigits(argv[argc])))
+		if (n < 0 || !_aredigits(argv[argc]))
 			return (0);
 		sum += n;
 	}
@@ -53,7 +53,7 @@ int	main(int argc, char *argv[])
 	(void)argv;
 	if (argc == 1)
 		printf("0\n");
-	if (!_add(argc, argv))
+	else if (!_add(argc, argv))
 	{
 		printf("Error\n");
 		return (1);
