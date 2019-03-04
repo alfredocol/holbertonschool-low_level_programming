@@ -9,7 +9,7 @@ void	print_alphabet(void);
 void	print_alphabet_x10(void);
 int	_islower(int c);
 int	_isalpha(int c);
-int	print_sign(int n); 
+int	print_sign(int n);
 int	_abs(int);
 int	print_last_digit(int);
 void	jack_bauer(void);
@@ -69,5 +69,4 @@ char *_strstr(char *haystack, char *needle);
 void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
 void set_string(char **s, char *to);
-
 #endif
