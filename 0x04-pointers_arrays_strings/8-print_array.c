@@ -16,18 +16,8 @@ void print_array(int *a, int n)
 	if (n < 1)
 	{
 		printf("\n");
-		return ;
+		return;
 	}
 	while (n--)
 		!n ? printf("%d\n", *a++) : printf("%d, ", *a++);
-}
-int main(void)
-{
-	int array[1] = {
-		98
-	};
-
-	print_array(array, 0);
-	print_array(array, -1);
-	return (0);
 }
