@@ -9,7 +9,7 @@
  */
 int	**alloc_grid(int width, int height)
 {
-	int	**grid = (int **)malloc(sizeof((width * height)));
+	int	**grid = (int **)malloc(sizeof(int) * width * height);
 	int	i, j;
 
 	if (!grid)
