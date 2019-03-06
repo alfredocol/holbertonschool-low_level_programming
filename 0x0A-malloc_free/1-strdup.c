@@ -46,7 +46,7 @@ char    *_strcpy(char *dest, char *src)
 char	*_strdup(char *str)
 {
 	int	len = _strlen(str);
-	char	*p = !len ? NULL : (char *)malloc(len);
+	char	*p = !len ? NULL : (char *)malloc(len + 1);
 
 	if (!p)
 		return (NULL);
