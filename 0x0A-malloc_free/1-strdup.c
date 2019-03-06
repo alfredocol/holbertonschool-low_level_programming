@@ -6,15 +6,17 @@
  * Description: returns the length of a string.
  * Return: len of string
  */
-int     _strlen(char *s)
+int _strlen(char *s)
 {
-	int     len = 0;
+	int count;
 
-	if (!s || !*s)
-		return (0);
-	while (s[len])
-		len++;
-	return (len);
+	count = 0;
+	while (*s)
+	{
+		count++;
+		s++;
+	}
+	return (count);
 }
 /**
  * _strcpy - copies the string pointed to by src, including
@@ -26,19 +28,15 @@ int     _strlen(char *s)
  * the terminating null byte (\0), to the buffer pointed to by dest.
  * Return: pointer to dest
  */
-char    *_strcpy(char *dest, char *src)
+char	*_strcpy(char *dest, char *src)
 {
-	int     i = 0;
-	char    *p = dest;
+	int i;
 
-	if (!src || !*src)
-		return (0);
-	while (src[i])
+	for (i = 0; *(src + i); ++i)
 	{
-		*p++ = src[i];
-		i++;
+		*(dest + i) = *(src + i);
 	}
-	*p = '\0';
+	*(dest + i) = '\0';
 	return (dest);
 }
 /**
