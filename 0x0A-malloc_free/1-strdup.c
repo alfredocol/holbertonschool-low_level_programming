@@ -48,7 +48,7 @@ char	*_strdup(char *str)
 	int	len;
 	char	*dupe;
 
-	if (!str || !*str)
+	if (!str)
 		return (NULL);
 	len = _strlen(str);
 	dupe = (char *)malloc(len + 1);
