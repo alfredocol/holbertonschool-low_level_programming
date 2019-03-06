@@ -31,6 +31,8 @@ char    *_strcpy(char *dest, char *src)
 	int     i = 0;
 	char    *p = dest;
 
+	if (!s || !*s)
+		return (0);
 	while (src[i])
 	{
 		*p++ = src[i];
