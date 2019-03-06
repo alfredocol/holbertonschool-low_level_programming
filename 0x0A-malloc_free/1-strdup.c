@@ -45,10 +45,12 @@ char    *_strcpy(char *dest, char *src)
  */
 char	*_strdup(char *str)
 {
-	int	len = _strlen(str);
-	char	*p = !len ? NULL : (char *)malloc(len + 1);
+	int	len;
+	char	*dupe;
 
-	if (!p)
+	if (!str || !*str)
 		return (NULL);
-	return (_strcpy(p, str));
+	len = _strlen(str);
+	dupe = (char *)malloc(len + 1);
+	return (_strcpy(dupe, str));
 }
