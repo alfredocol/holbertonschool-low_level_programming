@@ -56,7 +56,7 @@ char	*_strdup(char *str)
 	if (!*str)
 	{
 		dupe = (char *)malloc(2);
-		dupe[0] = '\0';
+		dupe[0] = *str;
 		dupe[1] = '\0';
 	}
 	else
