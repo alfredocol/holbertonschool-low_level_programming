@@ -15,19 +15,26 @@ int     _strlen(char *s)
 	return (len);
 }
 /**
- * _memcpy - copies memory area.
- * @dest: string
- * @src: string
- * @n: # of bytes to copy
+ * _strcpy - copies the string pointed to by src, including
+ * the terminating null byte (\0), to the buffer pointed to by dest
+ * @src: string to be copied from
+ * @dest: string to be copied to
  *
+ * Description: copies the string pointed to by src, including
+ * the terminating null byte (\0), to the buffer pointed to by dest.
  * Return: pointer to dest
  */
-char    *_memcpy(char *dest, char *src, unsigned int n)
+char    *_strcpy(char *dest, char *src)
 {
-	unsigned int    i = -1;
+	int     i = 0;
+	char    *p = dest;
 
-	while (++i < n)
-		dest[i] = src[i];
+	while (src[i])
+	{
+		*p++ = src[i];
+		i++;
+	}
+	*p = 0;
 	return (dest);
 }
 /**
@@ -43,5 +50,5 @@ char	*_strdup(char *str)
 
 	if (!p)
 		return (NULL);
-	return (_memcpy(p, str, len));
+	return (_strcpy(p, str));
 }
