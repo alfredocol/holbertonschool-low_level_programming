@@ -10,6 +10,8 @@ int     _strlen(char *s)
 {
 	int     len = 0;
 
+	if (!s || !*s)
+		return (0);
 	while (s[len])
 		len++;
 	return (len);
@@ -52,5 +54,5 @@ char	*_strdup(char *str)
 		return (NULL);
 	len = _strlen(str);
 	dupe = (char *)malloc(len + 1);
-	return (_strcpy(dupe, str));
+	return (dupe = _strcpy(dupe, str));
 }
