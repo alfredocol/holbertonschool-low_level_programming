@@ -53,6 +53,16 @@ char	*_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 	len = _strlen(str);
-	dupe = (char *)malloc(len + 1);
-	return (dupe = _strcpy(dupe, str));
+	if (!*str)
+	{
+		dupe = (char *)malloc(2);
+		dupe[0] = '\0';
+		dupe[1] = '\0';
+	}
+	else
+	{
+		dupe = (char *)malloc(len + 1);
+		dupe = _strcpy(dupe, str);
+	}
+	return (dupe);
 }
