@@ -7,10 +7,10 @@
  *
  * Return: 2D int array
  */
-int	**alloc_grid(int width, int height)
+int     **alloc_grid(int width, int height)
 {
-	int	**grid;
-	int	i, j;
+	int     **grid;
+	int     i, j;
 
 	if (height <= 0 || width <= 0)
 		return (NULL);
