@@ -8,11 +8,11 @@
  */
 int     _strlen(char *s)
 {
-        int     len = 0;
+	int     len = 0;
 
-        while (s[len])
-                len++;
-        return (len);
+	while (s[len])
+		len++;
+	return (len);
 }
 /**
  * string_nconcat - concatenates two strings
@@ -20,7 +20,7 @@ int     _strlen(char *s)
  * @s2: string for concatenation
  * @n: # of bytes of s2 to concat
  *
- * Return: NULL if malloc fails or pointer to concatenated string 
+ * Return: NULL if malloc fails or pointer to concatenated string
  */
 char	*string_nconcat(char *s1, char *s2, unsigned int n)
 {

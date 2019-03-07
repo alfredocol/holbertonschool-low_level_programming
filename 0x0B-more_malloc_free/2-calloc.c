@@ -2,8 +2,8 @@
 
 /**
  * _calloc - returns malloc'd array with elements set to zero
- * nmemb: elements to malloc
- * size: byte size of element
+ * @nmemb: elements to malloc
+ * @size: byte size of element
  *
  * Return: void pointer to malloc'd memory
  */
