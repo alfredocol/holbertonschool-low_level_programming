@@ -31,7 +31,7 @@ char	*string_nconcat(char *s1, char *s2, unsigned int n)
 	len1 = !s1 ? 0 : _strlen(s1);
 	len2 = !s2 ? 0 : _strlen(s2);
 	/*if n is greater or equal to the length of s2 then use the entire string s2*/
-	len2 = (int) n >= len2 ? len2 : n;
+	len2 = (int) n >= len2 ? len2 : (int) n;
 	len = len1 + len2;
 	concat = (char *)malloc(sizeof(char) * len + 1);
 	/*if the function fails, it should return NULL.*/
