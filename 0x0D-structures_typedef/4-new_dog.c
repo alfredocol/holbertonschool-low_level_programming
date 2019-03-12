@@ -39,7 +39,7 @@ dog_t	*new_dog(char *name, float age, char *owner)
 		for (len1 = 0; name[len1]; len1++)
 			;
 		d->name = malloc(len1 + 1);
-		d->name =  d->name ? strcpy(d->name, name) : NULL;
+		d->name =  d->name ? _strcpy(d->name, name) : NULL;
 	}
 	else
 		d->name = NULL;
@@ -48,7 +48,7 @@ dog_t	*new_dog(char *name, float age, char *owner)
 		for (len2 = 0; name[len2]; len2++)
 			;
 		d->owner = malloc(len2 + 1);
-		d->owner =  d->owner ? strcpy(d->owner, owner) : NULL;
+		d->owner =  d->owner ? _strcpy(d->owner, owner) : NULL;
 	}
 	else
 		d->owner = NULL;
