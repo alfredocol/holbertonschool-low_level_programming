@@ -1,10 +1,11 @@
 #include "function_pointers.h"
 
 /**
- * print_name = prints a name with a callback
+ * print_name - prints a name with a callback
  * @name: string containing name
  * @f: pointer to function that prints passed in string
  *
+ * Return: NULL or nothing
  */
 void	*print_name(char *name, void (*f)(char *))
 {
