@@ -9,9 +9,9 @@
  */
 void	array_iterator(int *array, size_t size, void (*action)(int))
 {
-	/* return NULL if size == 0, array is NULL or action is NULL */
+	/* return ; if size == 0, array is NULL or action is NULL */
 	if (!array || size < 1 || !action)
-		return (NULL);
+		return;
 	/* pass each element of array to action */
 	while (size--)
 		action(*array++);

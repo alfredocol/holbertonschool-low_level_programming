@@ -7,11 +7,11 @@
  *
  * Return: NULL or nothing
  */
-void	*print_name(char *name, void (*f)(char *))
+void	print_name(char *name, void (*f)(char *))
 {
-	/* return NULL if name and or f is NULL */
+	/* return ; if name and or f is NULL */
 	if (!name || !f)
-		return (NULL);
+		return;
 	/* print name with passed in function pointer */
 	f(name);
 }

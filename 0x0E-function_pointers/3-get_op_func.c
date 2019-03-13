@@ -13,18 +13,14 @@ int	(*get_op_func(char *s))(int a, int b)
 	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
-		{"", op_mul},
+		{"*", op_mul},
 		{"/", op_div},
 		{"%", op_mod},
 		{NULL, NULL}
 	};	
 	/* Loop through array of structs, stopping at NULL*/
 	while (ops[i].op[0])
-		if (ops[i].op[0] == *s)
-		/* 
-		* if op matches passed in op (*s), return the function pointer of that struct
-		* The function pointer will use the int's passed in and return a result.
-		*/
+		if (ops[i].op[0] == s[0])
 			return (ops[i].f);
 	return (NULL);	
 }
