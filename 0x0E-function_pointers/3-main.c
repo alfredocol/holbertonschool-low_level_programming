@@ -20,9 +20,8 @@ int	main(int argc, char **argv)
 			printf("Error\n");
 		else
 		{
-			result = get_op_func(op)(num1, num2);
-			if (result)
-				printf("%d\n", get_op_func(op)(num1, num2));
+			if (argv[2][0] != '\\')
+				printf("%d\n", result = get_op_func(op)(num1, num2));
 			else
 				printf("Error\n");
 		}
