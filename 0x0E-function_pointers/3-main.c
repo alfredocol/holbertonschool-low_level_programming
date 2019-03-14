@@ -4,11 +4,11 @@
  * @argc: argument count
  * @argv: commandline arguments
  *
- * Retturn: Always 0
+ * Return: Always 0
  */
 int	main(int argc, char **argv)
 {
-	int	num1, num2;
+	int	num1, num2, result;
 	char	*op;
 
 	if (argc == 4)
@@ -16,7 +16,15 @@ int	main(int argc, char **argv)
 		num1 = atoi(argv[1]);
 		num2 = atoi(argv[3]);
 		op = argv[2];
-		printf("%d\n", get_op_func(op)(num1, num2));
+		if ((*op == '/' || *op == '%') && !num2)
+			printf("Error\n");
+		else
+		{
+			result = get_op_func(op)(num1, num2);
+			if (result)
+				printf("%d\n", get_op_func(op)(num1, num2));
+			else
+				printf("Error\n");
 	}
 	else
 		printf("Error\n");
