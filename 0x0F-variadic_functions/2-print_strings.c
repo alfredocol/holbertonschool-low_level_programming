@@ -10,6 +10,8 @@ void	print_strings(const char *separator, const unsigned int n, ...)
 	va_list	list;
 	int	i = (int) n;
 
+	if (n < 1)
+		return;
 	va_start(list, n);
 	while (--i)
 		printf("%s%s", va_arg(list, char *), (char *)separator);
