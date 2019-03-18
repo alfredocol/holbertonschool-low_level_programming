@@ -10,8 +10,11 @@ void	print_numbers(const char *separator, const unsigned int n, ...)
 	va_list	list;
 	int	i = (int) n;
 
-	if (n < 1)
+	if (!n)
+	{
+		printf("\n");
 		return;
+	}
 	va_start(list, n);
 	while (--i)
 		printf("%d%s", va_arg(list, int), separator);

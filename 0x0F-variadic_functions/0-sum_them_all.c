@@ -1,4 +1,4 @@
-#include "variadic_funtions.h"
+#include "variadic_functions.h"
 /**
  * sum_them_all - sums passed in va_args
  * @n: # of arguments
@@ -8,13 +8,14 @@
 int	sum_them_all(const unsigned int n, ...)
 {
 	int	sum = 0;
+	int	i = (int)n;
 	va_list	list;
 
-	if (n < 1)
-		return;
+	if (!i)
+		return (0);
 	va_start(list, n);
-	for (sum = 0; n > -1; sum += va_arg(list, int))
-		;
+	while (i--)
+		sum += va_arg(list, int);
 	va_end(list);
 	return (sum);
 }

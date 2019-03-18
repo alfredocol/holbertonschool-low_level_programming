@@ -7,11 +7,12 @@
 void	print_all(const char * const format, ...)
 {
 	va_list list;
+	char	*s = (char *)format;
 
 	va_start(list, format);
-	while (*format)
+	while (*s)
 	{
-		switch (*format)
+		switch (*s)
 		{
 			case '\0':
 				break;
@@ -28,9 +29,9 @@ void	print_all(const char * const format, ...)
 				printf("%lu\n", va_arg(list, long));
 				break;
 			default:
-				format++;
+				s++;
 		}
-		format++;
+		s++;
 	}
 	va_end(list);
 }
