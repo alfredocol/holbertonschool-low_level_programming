@@ -14,7 +14,7 @@ size_t	print_list(const list_t *h)
 	if (!h)
 		return (count);
 	/* If str is NULL, print [0] (nil) */
-	for (node = (list_t *)h; node; node = node->next)
+	for (node = (list_t *)h; node; node = node->next, count++)
 		printf("[%u] %s", node->str ? "[0] (nil)\n", node->str : node->len, node->str);
 	return (count);
 }
