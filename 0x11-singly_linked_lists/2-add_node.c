@@ -24,10 +24,10 @@ unsigned int _strlen(char *s)
  */
 list_t *add_node(list_t **head, const char *str)
 {
-        list_t  *node;
+	list_t  *node;
 
-        if (!h)
-                return (NULL);
+	if (!h)
+		return (NULL);
 	node = malloc(sizeof(list_t));
 	if (!node)
 		return (NULL);

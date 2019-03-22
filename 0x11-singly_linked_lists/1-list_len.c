@@ -7,13 +7,13 @@
  */
 size_t	list_len(const list_t *h)
 {
-        list_t  *node;
-        size_t  count = 0;
+	list_t  *node;
+	size_t  count = 0;
 
-        if (!h)
-                return (count);
-        /* If str is NULL, print [0] (nil) */
-        for (node = (list_t *)h; node; node = node->next, count++)
-        	;
+	if (!h)
+		return (count);
+	/* If str is NULL, print [0] (nil) */
+	for (node = (list_t *)h; node; node = node->next, count++)
+		;
 	return (count);
 }
