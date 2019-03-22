@@ -17,14 +17,14 @@ unsigned int _strlen(char *s)
 
 /**
  * add_node_end - adds a new node end of linked list.
- * @h: pointer to head of linked list
+ * @head: pointer to head of linked list
  * @str: char * for new node
  *
- * Return - the address of the new element, or NULL if it failed
+ * Return: the address of the new element, or NULL if it failed
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t 	*node, i;
+	list_t	*node, i;
 
 	if (!h)
 		return (NULL);

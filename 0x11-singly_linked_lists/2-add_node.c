@@ -17,7 +17,7 @@ unsigned int _strlen(char *s)
 
 /**
  * add_node - adds a new node to linked list.
- * @h: pointer to head of linked list
+ * @head: pointer to head of linked list
  * @str: char * for new node
  *
  * Return: the address of the new element, or NULL if it failed
