@@ -10,7 +10,7 @@ unsigned int _strlen(char *s)
 {
 	unsigned int len = 0;
 
-	while(s[len])
+	while (s[len])
 		;
 	return (len);
 }
@@ -20,7 +20,7 @@ unsigned int _strlen(char *s)
  * @h: pointer to head of linked list
  * @str: char * for new node
  *
- * Return - the address of the new element, or NULL if it failed
+ * Return: the address of the new element, or NULL if it failed
  */
 list_t *add_node(list_t **head, const char *str)
 {
