@@ -22,7 +22,7 @@ void	print_all(const char * const format, ...)
 		{
 			case 's':
 				str = va_arg(list, char *);
-				printf("%s", !s ? "(nil)" : str);
+				printf("%s", !str ? "(nil)" : str);
 				break;
 			case 'i':
 				printf("%i", va_arg(list, int));
@@ -36,6 +36,8 @@ void	print_all(const char * const format, ...)
 			default:
 				break;
 		}
+		if (*(s + 1))
+			printf(", ");
 		s++;
 	}
 	printf("\n");
