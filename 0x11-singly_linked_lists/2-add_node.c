@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * _strlen - len of string
@@ -11,7 +11,7 @@ unsigned int _strlen(char *s)
 	unsigned int len = 0;
 
 	while (s[len])
-		;
+		len++;
 	return (len);
 }
 
@@ -26,13 +26,17 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t  *node;
 
-	if (!h)
+	/* NULL checking for node passed in and malloc */
+	if (!*head)
 		return (NULL);
 	node = malloc(sizeof(list_t));
 	if (!node)
 		return (NULL);
-	node->strdup(str);
+	/* setting elements of new node */
+	node->str = strdup(str);
 	node->len = (unsigned int)_strlen((char *)str);
+	/* placing node at top of linked list */
 	node->next = *head;
-	return (node);
+	*head = node;
+	return (*head);
 }

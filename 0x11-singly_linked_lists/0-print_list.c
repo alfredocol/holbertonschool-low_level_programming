@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * print_list - prints all the elements of a list
@@ -19,7 +19,7 @@ size_t	print_list(const list_t *h)
 		if (node->str)
 			printf("[%u] %s\n", node->len, node->str);
 		else
-			printf("[%u] %s\n", "[0] (nil)");
+			printf("[%u] %s\n", 0, "(nil)");
 		count++;
 	}
 	return (count);
