@@ -1,7 +1,7 @@
 section .data	;The data section is used for declaring constants
 	msg	db "Hello, Holberton",`\n`
 
-section .text	;The text section is for code. 
+section .text	;The text section is for code.
 	global	_start	;tells kernel where program begins
 
 _start:
