@@ -6,10 +6,10 @@
  */
 void	free_list(list_t *head)
 {
-        list_t  *free_me;
+	list_t  *free_me;
 
-        if (!h)
-                return (NULL);
+	if (!h)
+		return (NULL);
 	while (head)
 	{
 		free_me = head;
