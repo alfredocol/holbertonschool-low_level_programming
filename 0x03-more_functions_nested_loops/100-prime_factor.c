@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * isprime - returns 1 if prime
@@ -10,35 +9,45 @@
  */
 int	isprime(int n)
 {
-	int		i;
+	int	i;
 
 	if (n < 2)
 		return (0);
 	if (n == 2 || n == 3)
 		return (1);
-	for (i = 2; i < n / 2; i++)
+	for (i = 2; i < sqrt(n); i++)
 		if (!(n / i))
 			return (0);
 	return (1);
 }
 /**
- * _prime - prints largest prime factor of the number
- * 612852475143
- * @n: int
- *
- * Description: see prime_factor
- * Return: ;
+ * largest_prime_factor - prints largest prime factor of 612852475143
+ * @void: does not take in parameters
  */
-void	_prime(unsigned long n)
+void	largest_prime_factor(void)
 {
-	unsigned long	prime, largest_prime;
+	unsigned long	i, largest = 0, n;
 
-	largest_prime = n;
-	for (prime = 2; prime < largest_prime; prime++)
-		if (isprime(prime))
-			while (!(largest_prime % prime))
-				largest_prime = largest_prime / prime;
-	printf("%lu\n", largest_prime);
+	n = N;
+
+	for (i = 2; i < n; i++)
+	{
+		/* if i is factor of N and is prime */
+		if (!(n % i) && isprime(i))
+		{
+			/* reduce n by n / i */
+			n /= i;
+			/* update largest prime */
+			largest = i;
+			/* break out early if n is largest prime */
+			if (isprime(n))
+			{
+				largest = n;
+				break;
+			}
+		}
+	}
+	printf("%lu\n", largest);
 }
 /**
  * main - main
@@ -49,6 +58,6 @@ void	_prime(unsigned long n)
  */
 int	main(void)
 {
-	_prime(612852475143);
+	largest_prime_factor();
 	return (0);
 }

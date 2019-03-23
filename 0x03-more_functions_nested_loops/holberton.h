@@ -1,7 +1,15 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
+/* C header files */
+#include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <math.h>
+/* constant for task 11 */
+#define N 612852475143
+
+/* prototypes */
 int	_putchar(int c);
 int	_isupper(int c);
 int	_isdigit(int c);
