@@ -34,21 +34,16 @@ int     _strlen(char *s)
  * @s: string
  * @size: len of string
  */
-void    rev_numstring(char *s, int size)
+void	rev_numstring(char *s, int size)
 {
-	int	len;
 	int	i;
 	char	temp;
 
-	while (--size && s[size] == '0')
-		;
-	len = size;
-	for (i = 0; i < len; i++, len--)
+	for (i = 0; i < --size; i++, size--)
 	{
 		temp = s[i];
-		s[i] = s[len];
-		s[len] = temp;
-		printf("%s\n", s);
+		s[i] = s[size];
+		s[size] = temp;
 	}
 }
 /**
@@ -92,7 +87,7 @@ char *infinite_add(char *n, char *m, char *r, int size)
 		r[j] += '0';
 	}
 	if (carryover)
-		r[j] = carryover + '0';
-	rev_numstring(r, j + 1);
+		r[j++] = carryover + '0';
+	rev_numstring(r, j);
 	return (r);
 }
