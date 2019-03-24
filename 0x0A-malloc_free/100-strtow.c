@@ -24,7 +24,7 @@ int	error(char *s)
 {
 	char *p;
 	/* Check for empty string, NULL string and no words */
-	if (!str || !*str)
+	if (!s || !*s)
 		return (1);
 	/* check for none space chars */
 	for (p = s; *p; p++)
@@ -43,7 +43,7 @@ char **strtow(char *str)
 	int	i, j, k, len, wrdlen, word = 0;
 	char	**word_arr;
 
-	if (error(s))
+	if (error(str))
 		return (NULL);
 	/*Malloc total len of string--should give some extra space*/
 	len = _strlen(str);
