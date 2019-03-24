@@ -50,7 +50,7 @@ char **strtow(char *str)
 				return (NULL);
 			/*cpy in word*/
 			k = 0;
-			while ((str[i] && str[i] != ' ')
+			while ((str[i] && str[i] != ' '))
 				word_arr[word][k++] = str[i++];
 			/*NULL terminate word*/
 			word_arr[word][k] = '\0';
@@ -58,6 +58,6 @@ char **strtow(char *str)
 		}
 	}
 	/*NUll terminate array*/
-	word_arr[word] = '\0';
+	word_arr[word] = 0;
 	return (word_arr);
 }
