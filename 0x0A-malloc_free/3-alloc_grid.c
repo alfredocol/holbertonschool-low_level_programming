@@ -14,12 +14,12 @@ int     **alloc_grid(int width, int height)
 
 	if (height <= 0 || width <= 0)
 		return (NULL);
-	grid = (int **)calloc(sizeof(int *) * height);
+	grid = (int **)malloc((sizeof(int *) * height));
 	if (!grid)
 		return (NULL);
 	for (i = 0; i < height; i++)
 	{
-		grid[i] = (int *)malloc(sizeof(int) * width);
+		grid[i] = (int *)calloc(width, sizeof(int));
 		if (!grid[i])
 			return (NULL);
 		for (j = 0; j < width; j++)
