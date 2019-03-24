@@ -25,7 +25,8 @@ char **strtow(char *str)
 	int	i, j, k, len, wrdlen, word = 0;
 	char	**word_arr;
 
-	if (!str)
+	/* Error check for empty string, NULL string and no words */
+	if (!str || !*str || (*str == ' ' && !*(str + 1)))
 		return (NULL);
 	/*Malloc total len of string--should give some extra space*/
 	len = _strlen(str);
