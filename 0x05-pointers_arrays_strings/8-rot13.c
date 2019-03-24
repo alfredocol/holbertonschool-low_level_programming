@@ -19,7 +19,10 @@ char *rot13(char *s)
 		while (l[i])
 		{
 			if (l[i] == *p)
+			{
 				*p = rot[i];
+				break;
+			}
 			i++;
 		}
 		p++;
