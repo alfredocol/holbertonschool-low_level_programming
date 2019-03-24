@@ -31,33 +31,29 @@ dog_t	*new_dog(char *name, float age, char *owner)
 
 	if (!d)
 		return (NULL);
-	d->name = name;
 	if (name)
 	{
 		for (len1 = 0; name[len1]; len1++)
 			;
 		d->name = malloc(len1 + 1);
 		d->name =  d->name ? _strcpy(d->name, name) : NULL;
+		if (!d->name)
+			return (free(d), NULL);
 	}
-	else
-		d->name = NULL;
 	if (owner)
 	{
 		for (len2 = 0; name[len2]; len2++)
 			;
 		d->owner = malloc(len2 + 1);
 		d->owner =  d->owner ? _strcpy(d->owner, owner) : NULL;
+		if (!d->owner)
+		{
+			if (d->name)
+				free(d->name);
+			free(d);
+			return (NULL);
+		}
 	}
-	else
-		d->owner = NULL;
 	d->age = age;
-	/* if function fails, return NULL */
-	if (!d->name || !d->owner)
-	{
-		free(d->name);
-		free(d->owner);
-		free(d);
-		return (NULL);
-	}
 	return (d);
 }
