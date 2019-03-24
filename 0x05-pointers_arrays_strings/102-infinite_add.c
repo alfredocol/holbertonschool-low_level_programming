@@ -39,7 +39,8 @@ void	rev_numstring(char *s, int size)
 	int	i;
 	char	temp;
 
-	for (i = 0; i < --size; i++, size--)
+	--size;
+	for (i = 0; i < size; i++, size--)
 	{
 		temp = s[i];
 		s[i] = s[size];
