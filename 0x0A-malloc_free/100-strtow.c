@@ -15,6 +15,24 @@ int     _strlen(char *s)
 	return (len);
 }
 /**
+ * error - error checks string
+ * @s: string
+ *
+ * Return: 1 if error 0 if not
+ */
+int	error(char *s)
+{
+	char *p;
+	/* Check for empty string, NULL string and no words */
+	if (!str || !*str)
+		return (1);
+	/* check for none space chars */
+	for (p = s; *p; p++)
+		if (*p != ' ')
+			return (0);
+	return (1);
+}
+/**
  * strtow - returns a pointer to an array of strings (words)
  * @str: string
  *
@@ -25,8 +43,7 @@ char **strtow(char *str)
 	int	i, j, k, len, wrdlen, word = 0;
 	char	**word_arr;
 
-	/* Error check for empty string, NULL string and no words */
-	if (!str || !*str || (*str == ' ' && !*(str + 1)))
+	if (error(s))
 		return (NULL);
 	/*Malloc total len of string--should give some extra space*/
 	len = _strlen(str);
