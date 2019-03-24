@@ -64,7 +64,7 @@ char *infinite_add(char *n, char *m, char *r, int size)
 	int	i, j;
 
 	/* error check */
-	if (!n || !m || !r || mlen - 1 > size || nlen - 1 > size)
+	if (!r || mlen - 1 > size + 1 || nlen - 1 > size)
 		return (0);
 	/* set all elements to 0 */
 	_memset(r, 0, size);
@@ -78,6 +78,10 @@ char *infinite_add(char *n, char *m, char *r, int size)
 		if (!mlen && !nlen)
 			break;
 	}
+	/* error check for r overflow */
+	if (i == size - 1)
+		if (m[mlen] + n[nlen] - 48 > 9)
+			return (0);
 	/* update carryover */
 	for (j = 0; j <= i; j++)
 	{
