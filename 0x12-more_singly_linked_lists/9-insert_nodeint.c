@@ -40,7 +40,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/* add to beginning of empty list */
 	if (!*head && !idx)
 		return (add_nodeint(head, (const int) n));
-	/* Loop and print */
+	/* Loop and insert */
 	for (i = 0, cur = *head; cur; prev = cur, cur = cur->next, i++)
 	{
 		if (i == idx)
