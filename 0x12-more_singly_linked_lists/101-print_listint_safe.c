@@ -7,8 +7,8 @@
  */
 size_t  print_listint_safe(const listint_t *h)
 {
-	size_t      sum = 0;
-	listint_t   *temp;
+	size_t		sum = 0;
+	listint_t	*temp;
 
 	/* If the function fails, exit the program with status 98 */
 	if (!h)
