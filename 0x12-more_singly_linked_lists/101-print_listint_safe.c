@@ -20,6 +20,7 @@ size_t  print_listint_safe(const listint_t *h)
 	while (h)
 	{
 		printf("[%p] %d\n", (void *)h, h->n);
+		sum++;
 		if (!h->next)
 			break;
 		if (h->next > h)
@@ -28,7 +29,7 @@ size_t  print_listint_safe(const listint_t *h)
 			break;
 		}
 		h = h->next;
-		sum++;
+
 	}
 	/* Returns: the number of nodes in the list */
 	return (sum);
