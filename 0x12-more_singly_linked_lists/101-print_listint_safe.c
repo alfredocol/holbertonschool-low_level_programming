@@ -20,8 +20,13 @@ size_t  print_listint_safe(const listint_t *h)
 	while (h)
 	{
 		printf("[%p] %d\n", (void *)h, h->n);
-		if (!h->next || (h->next > h))
+		if (!h->next)
 			break;
+		if (h->next > h)
+		{
+			printf("-> [%p] %d\n", (void *)h->next, h->next->n);
+			break;
+		}
 		h = h->next;
 		sum++;
 	}
