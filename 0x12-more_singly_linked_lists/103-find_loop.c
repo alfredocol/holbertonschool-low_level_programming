@@ -7,14 +7,17 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	while (h)
+	
+	listint_t	*node = head;
+	
+	while (node)
 	{
-		if (h->next >= h)
+		if (node->next >= node)
 		{
-			printf("Loop starts at [%p] %d\n", (void *)h->next, h->next->n);
-			return (h->next);
+			printf("[%p] %d\n", (void *)node->next, node->next->n);
+			return (node->next);
 		}
-		h = h->next;
+		node = node->next;
 
 	}
 	return (NULL);
