@@ -5,5 +5,5 @@
  */
 int get_endianness(void)
 {
-	return ((char)256 ? 1 : 0);
+	return ((char)256 ? 0 : 1);
 }
