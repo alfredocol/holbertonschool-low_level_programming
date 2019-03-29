@@ -23,7 +23,7 @@ void print_binary(unsigned long int n)
 	/* start printing binary rep of n*/
 	while (m)
 	{
-		printf("%d", !(m & n) ? 0 : 1);
+		_putchar(!(m & n) ? '0' : '1');
 		m >>= 1;
 	}
 }
