@@ -7,15 +7,13 @@
  */
 unsigned	int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int   m2 = 1, count = 0;
+	unsigned long int	mag, count = 0, bits = sizeof(n) * 8;
 
+	/* account for n = 0 and m = 0, plus returns early for other same n && m's */
 	if (n == m)
 		return (count);
-	while (m2 <= n || m2 <= m)
-	{
-		if ((m2 & n) != (m2 & m))
-			count++;
-		m2 <<= 1;
-	}
+	/* loop through bits, count bits to flip */
+	for (mag = 1; bits--; mag <<= 1)
+		count += (mag & n) != (mag & m);
 	return (count);
 }
